@@ -15,6 +15,15 @@ It's recommended to have the Game-folder and the Asobo-Toolk-Kit-Folder and This
 Default Launch Command:
 > python layout_symmies_ui.py -up
 
+## Usage
+
+You can search commands in the list with the search entry.
+
+If you select a command you can either press enter or press the "Run Command" button in order to send it to the ATK for execution.
+Every command send to the ATK this way will be written inside a runCommand(...) parameter;
+
+In order to send commands directly to the ATK, use the "Run ATK Command" Entry and button.
+
 ## Options
 -game *game.exe (change to what your game.exe is called.)
 
