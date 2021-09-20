@@ -1,1 +1,1 @@
-python layout_symmies_ui.py -up
+python version_1_ui.py -up
