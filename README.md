@@ -1,19 +1,24 @@
 # Symmies-ATK-UI
 An simple ui extension for the Asobo-Tool-Kit by widberg
 
-# IMPORTANT:
+## IMPORTANT:
 If want to close the programm, close the game first, then the "Symmies ATK UI" then the console.
 If you don't, dead processes will stack up, that you need to clear of manually in the task manager.
 
+## Starting
 To start, doubleclick the start.bat
-It's recommended to have the Gamefolder and the Asobo Toolk Kit and This program folder in the same directory.
+It's recommended to have the Game-folder and the Asobo-Toolk-Kit-Folder and This UI-Program-Folder in the same directory.
+Default Launch Command:
+> python layout_symmies_ui.py -up
 
+
+## Options
 -game *game.exe (change to what your game.exe is called.)
 
--hook (Enables Game hooking, instead of Starting the game itself)
+-hook (Hooks in to running game; if left out, start's the game up.)
 
--up (Goes with the working directory one up;)
+-up (Goes with the working directory one up; Default)
 
--chdir *path (Change Working Directory, so that the programm can find the executables and other dependencies.)
+-chdir *path (Change Working Directory, so that the programm can find the executables)
 
 
