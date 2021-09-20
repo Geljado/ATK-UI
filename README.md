@@ -3,7 +3,7 @@ An simple ui extension for the Asobo-Tool-Kit by widberg
 
 ## Requirements
 - [Python3](https://www.python.org/)
-- [Asobo Tool Kit](https://github.com/widberg/atk).
+- [Asobo Tool Kit](https://github.com/widberg/atk)
 
 ## IMPORTANT:
 If want to close the programm, close the game first, then the "Symmies ATK UI" then the console.
