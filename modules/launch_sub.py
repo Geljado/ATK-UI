@@ -26,6 +26,12 @@ Options:
     game_exe - the full name of the *game.exe file.
     atk_js - the full name of the *atk.js file.
 """
+        #Check if both Game path and ATK path are given.
+        if self.atk_path != "" and  self.game_path  != "":
+            print("Userpath's where given: {} & {}".format(self.atk_path, self.game_path))
+            return
+        
+        #Check if word_dir is empty, or set to a path
         if self.work_dir == "":
             MyCWD = os.getcwd()
         else:
@@ -90,7 +96,7 @@ Options:
     #########################VVVVVVVVVVVVVVV#########################
 
 
-    def __init__(self, atk_path:str="", game_path:str="", game_exe:str="WALL-E.exe", atk_js:str="atk.js", game_hooking:bool=False, work_dir:str="", log_length:int=100):
+    def __init__(self, atk_path:str="", game_path:str="", game_exe:str = "WALL-E.exe", atk_js:str="atk.js", game_hooking:bool=False, work_dir:str="", log_length:int=100):
         """Init's paths to ATK and *game.exe if needed;\nLaunces Subprocess Function in a thread;
 Options:
     game_exe - the full name of the *game.exe file.
@@ -102,13 +108,25 @@ Options:
     game_hooking - False / True | If false it creates a *game.exe procces, if true it hooks in to a running *game.exe process.
         """.format(os_sep = os.sep)
 
-        if "\n" in game_path or "\n" in atk_path:
+        #Error for path if given an "
+        if "\"" in game_path or "\"" in atk_path:
             raise SubLauncherError("[1] Remove \" from the paths given.")
+
+        
 
         self.work_dir = work_dir
         self.atk_path   =   atk_path
         self.game_path  =   game_path
         #Need self.game_exe for hooking;
+
+        #fix empty strings from sys.argv input
+        if game_exe == "":
+            game_exe = "WALL-E.exe"
+
+        if atk_js == "":
+            atk_js = "atk.js"
+
+            
         self.game_exe = game_exe
 
         #Log List
