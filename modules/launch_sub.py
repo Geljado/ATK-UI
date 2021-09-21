@@ -102,6 +102,9 @@ Options:
     game_hooking - False / True | If false it creates a *game.exe procces, if true it hooks in to a running *game.exe process.
         """.format(os_sep = os.sep)
 
+        if "\n" in game_path or "\n" in atk_path:
+            raise SubLauncherError("[1] Remove \" from the paths given.")
+
         self.work_dir = work_dir
         self.atk_path   =   atk_path
         self.game_path  =   game_path
