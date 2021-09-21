@@ -9,7 +9,7 @@ from modules.data import StandartCommands
 
 class Simplement(tk.Tk):
 
-    def __init__(self, master=None, game_exe:str="WALL-E.exe", game_hooking:bool=False, work_dir:str=""):
+    def __init__(self, master=None, game_exe:str="WALL-E.exe", game_hooking:bool=False, work_dir:str="",atk_path:str="", game_path:str=""):
         #create window
         super().__init__(master)
 
@@ -26,7 +26,7 @@ class Simplement(tk.Tk):
         self.bind("<Return>", self.send_command)
 
         #Launch Subprocess
-        self.process = MySubLauncher(game_exe=game_exe, game_hooking=game_hooking, work_dir=work_dir)
+        self.process = MySubLauncher(game_exe=game_exe, game_hooking=game_hooking, work_dir=work_dir, atk_path=atk_path , game_path=game_path )
         
         self.mainloop()
 
@@ -102,12 +102,13 @@ class Simplement(tk.Tk):
 
         self.MyATKEnter = tk.Button(self.Label4,text="Run Command", command=self.send_atk_command)
         self.MyATKEnter.pack(pady=2)
-        
 
-if __name__ == "__main__":
+def main():
     work_dir = ""
     game_hooking = False
     game_exe = ""
+    atk_path = ""
+    game_path = ""
 
     
     if len(sys.argv) > 1:
@@ -128,11 +129,20 @@ if __name__ == "__main__":
 
         if sys.argv[n] == "-game":
             game_exe = sys.argv[n+1]
+
+        if sys.argv[n] == "-atkpath":
+            atk_path = sys.argv[n+1]
+
+        if sys.argv[n] == "-gamepath":
+            game_path = sys.argv[n+1]
             
     try:
-        Simplement(work_dir=work_dir, game_hooking=game_hooking, game_exe=game_exe)
+        Simplement(work_dir=work_dir, game_hooking=game_hooking, game_exe=game_exe, atk_path=atk_path , game_path=game_path)
     except Exception as e:
         print(e)
         input()
+
+if __name__ == "__main__":
+    main()
     
 
