@@ -28,7 +28,7 @@ Every command send to the ATK this way will be written inside a runCommand(...) 
 In order to send commands directly to the ATK, use the "Run ATK Command" Entry and button.
 
 ## Options
--game *game.exe (change to what your game.exe is called.)
+-game *game.exe (Default is Wall-E.exe, you want to change it to what ever game you trying to launch)
 
 -hook (Hooks in to running game; if left out, start's the game up.)
 
