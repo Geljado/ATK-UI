@@ -35,3 +35,7 @@ In order to send commands directly to the ATK, use the "Run ATK Command" Entry a
 -up (Goes with the working directory one up; Default)
 
 -chdir *path (Change Working Directory, so that the programm can find the executables)
+
+-atkpath (Set a path to the atk directly, don't use any " include the the *atk.js at the end)
+
+-gamepath (Set a path to the game directly, don't use any "; include the the *game.exe at the end)
