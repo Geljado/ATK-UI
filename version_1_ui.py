@@ -127,10 +127,10 @@ if __name__ == "__main__":
             work_dir = os.path.dirname(os.getcwd())
 
         if sys.argv[n] == "-game":
-            work_dir = sys.argv[n+1]
+            game_exe = sys.argv[n+1]
             
     try:
-        Simplement(work_dir=work_dir,game_hooking=game_hooking)
+        Simplement(work_dir=work_dir, game_hooking=game_hooking, game_exe=game_exe)
     except Exception as e:
         print(e)
         input()
