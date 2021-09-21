@@ -30,7 +30,7 @@ In order to send commands directly to the ATK, use the "Run ATK Command" Entry a
 ## Options
 -game *game.exe (Default is Wall-E.exe, you want to change it to what ever game you trying to launch)
 
--hook (Hooks in to running game; if left out, start's the game up.)
+-hook (Hooks in to running game; if left out, start's a new game up.)
 
 -up (Goes with the working directory one up; Default)
 
