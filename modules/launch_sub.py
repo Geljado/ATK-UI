@@ -73,7 +73,9 @@ Options:
       
         """
         if hook:
+            #If hooking is enabled, give frida the command, and overwirte thee gamepath to be the process / exe name.
             hook = "n"
+            self.game_path = self.game_exe
         else:
             hook = "f"
 
@@ -103,6 +105,8 @@ Options:
         self.work_dir = work_dir
         self.atk_path   =   atk_path
         self.game_path  =   game_path
+        #Need self.game_exe for hooking;
+        self.game_exe = game_exe
 
         #Log List
         self.log = []
