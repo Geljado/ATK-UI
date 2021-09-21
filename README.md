@@ -9,9 +9,12 @@ An simple ui extension for the Asobo-Tool-Kit by widberg
 If want to close the programm, close the game first, then the "Symmies ATK UI" then the console.
 If you don't, dead processes will stack up, that you need to clear of manually in the task manager.
 
-## Starting
-To start, doubleclick the start.bat
-It's recommended to have the Game-folder and the Asobo-Toolk-Kit-Folder and This UI-Program-Folder in the same directory.
+
+
+To start click the start.bat
+It's recommended to have Game-, AsoboToolKit-, and UI-Program-Folder next to each other:
+## ![](https://user-images.githubusercontent.com/35775147/134157302-3921754f-880c-47cf-bc12-665d755f591c.png)
+
 Default Launch Command:
 > python layout_symmies_ui.py -up
 
