@@ -32,7 +32,7 @@ In order to send commands directly to the ATK, use the "Run ATK Command" Entry a
 
 -hook (Hooks in to running game; if left out, start's a new game up.)
 
--up (Goes with the working directory one up; Default)
+-up (Goes with the working directory one up; Don't use this option if you use -chdir)
 
 -chdir *path (Change Working Directory, so that the programm can find the executables)
 
