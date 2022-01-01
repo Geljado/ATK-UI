@@ -14,7 +14,7 @@ class Simplement(tk.Tk):
         super().__init__(master)
 
         self.title("Symmies ATK UI")
-        self.geometry("270x400")
+        self.geometry("270x440")
         #self.attributes('-toolwindow', True)
         
         self.resizable(width=False, height=False)
@@ -25,10 +25,18 @@ class Simplement(tk.Tk):
 
         self.bind("<Return>", self.send_command)
 
-        #Launch Subprocess
-        self.process = MySubLauncher(game_exe=game_exe, game_hooking=game_hooking, work_dir=work_dir, atk_path=atk_path , game_path=game_path )
+        #Launch Subprocess # !!! GAMEHOOK TRUE BY DEFAULT NOW !!!
+        self.game_exe = game_exe
+        self.work_dir = work_dir
+        self.atk_path = atk_path
+        self.game_path = game_path
+        #self.launch_hook()
         
         self.mainloop()
+
+    def launch_hook(self):
+        print(self.game_exe,self.work_dir,self.atk_path,self.game_path)
+        self.process = MySubLauncher(game_exe=self.game_exe, game_hooking=True, work_dir=self.work_dir, atk_path=self.atk_path , game_path=self.game_path )
 
     def key_handler(self, *args, **kwargs):
         MySearchTerm = self.MySearchText.get()
@@ -100,8 +108,10 @@ class Simplement(tk.Tk):
         self.MyATKEntry["textvariable"] = self.MyATKEntryText
         self.MyATKEntry.pack(pady=1)
 
-        self.MyATKEnter = tk.Button(self.Label4,text="Run Command", command=self.send_atk_command)
+        self.MyATKEnter = tk.Button(self.Label4,text="Run ATK Command", command=self.send_atk_command)
         self.MyATKEnter.pack(pady=2)
+        self.MyATKRelauncher = tk.Button(self.Label4,text="Relaunch Hook", command=self.launch_hook)
+        self.MyATKRelauncher.pack(pady=2)
 
 def main():
     work_dir = ""
