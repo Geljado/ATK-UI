@@ -1,5 +1,5 @@
 # ATK-UI
-An simple ui extension for the Asobo-Tool-Kit by widberg
+An UI extension for the Asobo-Tool-Kit by Widberg
 
 ## Requirements
 - [Python3](https://www.python.org/)
