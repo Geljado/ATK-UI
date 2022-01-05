@@ -1,1 +1,1 @@
-python version_1_ui.py -up
+python main.py
