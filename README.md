@@ -2,40 +2,44 @@
 An UI extension for the Asobo-Tool-Kit by Widberg
 
 ## Requirements
-- [Python3](https://www.python.org/)
+- [Python 3.9.7](https://www.python.org/)
+- [Frida](https://github.com/frida/frida)
 - [Asobo Tool Kit](https://github.com/widberg/atk)
+  (ATK Included)
 
-## IMPORTANT:
-If want to close the programm, close the game first, then the "Symmies ATK UI" then the console.
-If you don't, dead processes will stack up, that you need to clear of manually in the task manager.
+# Installation:
 
+Let's start by checking out that you have the right version of python installed:
 
+Open the windows commandline.
+You can do this by pressing "WindowsKey + R" then type "cmd" in the text-entry and hit enter.
 
-To start click the start.bat
-It's recommended to have Game-, AsoboToolKit-, and UI-Program-Folder next to each other:
-## ![](https://user-images.githubusercontent.com/35775147/134157302-3921754f-880c-47cf-bc12-665d755f591c.png)
+Then type in "python" and hit enter
+If it gives you an error that says that python doesn't exsist, you need to go to [python.org](https://www.python.org/) in order to download and install python 3.9.7.
+Important: The programm was programmed on python version 3.9.7- Higher versions of python might not work due to dependencies!
 
-Default Launch Command:
-> python layout_symmies_ui.py -up
+Now we need to install Frida.
+For that you type in to the console:
+pip3 install frida-tools
 
-## Usage
+Now you can copy the UI-progam to a desired folder.
+Make sure that you copy atk (folder), modules (folder), main.py and start.bat .
+In order to start the program you can double click the start.bat file.
+(Windows will likely give a warning)
 
-You can search commands in the list with the search entry.
+There we go.
 
-If you select a command you can either press enter or press the "Run Command" button in order to send it to the ATK for execution.
-Every command send to the ATK this way will be written inside a runCommand(...) parameter;
+# Usage:
+Welcome to the ATK-UI
+Under the Data tab, you can create a Profile.
+Then you can try to Auto-Get the commands from the game.
+You can also launch the game hook from there.
+(Important notice, version 2.0 only has hooking so far)
 
-In order to send commands directly to the ATK, use the "Run ATK Command" Entry and button.
+Use the searchbar for finding commands easier.
+In the Variable entry, you can enter a variable that goes along with executed command.
 
-## Options
--game *game.exe (Default is Wall-E.exe, you want to change it to what ever game you trying to launch)
+To execute, simple press return after you selected a command from the list, or pre the "Game Execute" button.
 
--hook (Hooks in to running game; if left out, start's a new game up.)
-
--up (Goes with the working directory one up; Don't use this option if you use -chdir)
-
--chdir *path (Change Working Directory, so that the programm can find the executables)
-
--atkpath (Set a path to the atk directly, don't use any " include the the *atk.js at the end)
-
--gamepath (Set a path to the game directly, don't use any "; include the the *game.exe at the end)
+If you want to communicate with the ATK directly, you can use the ATK /- Console Entry and button.
+(Enter does not work for that field)
