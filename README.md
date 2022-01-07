@@ -23,7 +23,7 @@ For that you type in to the console:
 pip3 install frida-tools
 
 Now you can copy the UI-progam to a desired folder.
-Make sure that you copy atk (folder), modules (folder), main.py and start.bat .
+Make sure that you copy atk (folder), modules (folder), data (folder), main.py and start.bat .
 In order to start the program you can double click the start.bat file.
 (Windows will likely give a warning)
 
