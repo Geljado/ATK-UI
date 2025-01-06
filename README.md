@@ -1,4 +1,4 @@
-# ATK-UI [Abandoned, Outdated, Broken & Poor code-quality]
+# ATK-UI $${\textbf{\color{red}[Abandoned, Deprecated, Broken, Poor code-quality]}}$$
 An UI extension for the Asobo-Tool-Kit by Widberg
 
 ## Requirements
